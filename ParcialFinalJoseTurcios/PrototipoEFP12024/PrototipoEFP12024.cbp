@@ -35,12 +35,18 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Bitacora.h" />
+		<Unit filename="include/Clientes.h" />
 		<Unit filename="include/Menus.h" />
+		<Unit filename="include/Peliculas.h" />
 		<Unit filename="include/Usuario.h" />
+		<Unit filename="include/VentaBoletos.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Bitacora.cpp" />
+		<Unit filename="src/Clientes.cpp" />
 		<Unit filename="src/Menus.cpp" />
+		<Unit filename="src/Peliculas.cpp" />
 		<Unit filename="src/Usuario.cpp" />
+		<Unit filename="src/VentaBoletos.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

@@ -1,4 +1,4 @@
-#include "Peliculas.h"
+#include "Peliculas.h" //Base utilizada de otro proyecto realizado con anterioridad; Por falta de tiempo no se pudo cambiar Peliculas por Informes
 
 Bitacora enviarDatosP;
 Menus traerMenuCat;
@@ -12,17 +12,17 @@ void Peliculas::menuPeliculas(string nombreUsuario)
     {
             system("cls");
 	cout << "\t\t\t-------------------------------------------------\n";
-    cout << "\t\t\t|    Kenph Ansonny Luna Martinez 9959--22-6326   |" <<endl;
+    cout << "\t\t\t|    José Turcios 9959-22-4451                    |" <<endl;
     cout << "\t\t\t-------------------------------------------------\n";
     cout << "\n\t\t\t-----------------------------------\n";
-    cout << "\t\t\t| Bienvenido al Menu de Peliculas |";
+    cout << "\t\t\t| Bienvenido al Menu de Informes |";
     cout << "\n\t\t\t---------------------------------"<<endl;
 
-    cout<<"\t\t\t 1. Registrar Peliculas"<<endl;
-	cout<<"\t\t\t 2. Imprimir Peliculas"<<endl;
-	cout<<"\t\t\t 3. Modificar Peliculas"<<endl;
-	cout<<"\t\t\t 4. Buscar Peliculas"<<endl;
-	cout<<"\t\t\t 5. Borrar Peliculas"<<endl;
+    cout<<"\t\t\t 1. Registrar Informe"<<endl;
+	cout<<"\t\t\t 2. Imprimir Informe"<<endl;
+	cout<<"\t\t\t 3. Modificar Informe"<<endl;
+	cout<<"\t\t\t 4. Buscar Informe"<<endl;
+	cout<<"\t\t\t 5. Borrar Informe"<<endl;
 	cout<<"\t\t\t 6. Regresar"<<endl;
     cout << "\n\n\t\t\t---------------------------------------";
     cout << "\n\t\t\t| Opciones a escoger: [1] - [2] - [3] - [4] - [5] - [6]";
@@ -75,24 +75,24 @@ void Peliculas::registroPeliculas(string nombreUsuario)
 	system("cls");
 	fstream file;
 	cout<<"\n------------------------------------------------------------------------------------------------------------------------";
-	cout<<"\n-------------------------------------------------- Ingresar Nuevo Peliculas -----------------------------------------------"<<endl;
-	cout<<"\n\t\t\tIngresa el ID de la Pelicula: ";
+	cout<<"\n-------------------------------------------------- Ingresar Nuevo Informe -----------------------------------------------"<<endl;
+	cout<<"\n\t\t\tIngresa el ID del Informe: ";
 	cin>>idPeli;
-	cout<<"\n\t\t\tIngresa el Nombre de la Pelicula: ";
+	cout<<"\n\t\t\tIngresa el Nombre del Informe: ";
 	cin>>nombrePeli;
-	cout<<"\t\t\tIngresa la clasificacion de la Peliculaa: ";
+	cout<<"\t\t\tIngresa la clasificacion del Informe (tipo A,B,C,D; A es el mas urgente): ";
 	cin>>clasPeli;
-	cout<<"\t\t\tIngresa el genero de la Pelicula: ";
+	cout<<"\t\t\tIngresa el Razon del Informe: ";
 	cin>>genPeli;
-	cout<<"\t\t\tIngresa los Sub-titulos de la Pelicula: ";
+	cout<<"\t\t\tIngresa algun Sub-titulo al Informe (N/A si no lo desea): ";
 	cin>>subPeli;
-	cout<<"\t\t\tIngresa el idioma de la Pelicula: ";
+	cout<<"\t\t\tIngresa el area del Informe a realizar: ";
 	cin>>idiomaPeli;
-	cout<<"\t\t\tIngresa el Precio de la entrada: ";
+	cout<<"\t\t\tIngresa el Nombre de la persona que registro el Informe: ";
 	cin>>precPeli;
-	cout<<"\t\t\tIngresa la hora de entrada de la Peliculaa: ";
+	cout<<"\t\t\tIngresa la hora de registro del Informe: ";
 	cin>>horaPeli;
-	file.open("Peliculas.txt", ios::app | ios::out | ios::binary);
+	file.open("Informes.txt", ios::app | ios::out | ios::binary);
 	file<<std::left<<std::setw(15)<< idPeli <<std::left<<std::setw(15)<< nombrePeli <<std::left<<std::setw(15)<< clasPeli <<std::left<<std::setw(15)<< genPeli <<std::left<<std::setw(15)<< subPeli <<std::left<<std::setw(15)<< idiomaPeli<<std::left<<std::setw(15)<< precPeli <<std::left<<std::setw(15)<< horaPeli << "\n";
 	file.close();
 }
@@ -104,8 +104,8 @@ enviarDatosP.ingresoDatosBitacora(userName,"7210","MOD");
     fstream file,file1;
 	string participant_id;
 	int found=0;
-	cout<<"\n-------------------------Modificacion Peliculas-------------------------"<<endl;
-	file.open("Peliculas.txt",ios::in);
+	cout<<"\n-------------------------Modificacion Informe-------------------------"<<endl;
+	file.open("Informes.txt",ios::in);
 	if(!file)
 	{
 		cout<<"\n\t\t\tNo hay informacion..,";
@@ -113,7 +113,7 @@ enviarDatosP.ingresoDatosBitacora(userName,"7210","MOD");
 	}
 	else
 	{
-		cout<<"\n Ingrese Id del Peliculas que quiere modificar: ";
+		cout<<"\n Ingrese Id del Informe que quiere modificar: ";
 		cin>>participant_id;
 		file1.open("Record.txt",ios::app | ios::out);
 		file >> idPeli >> nombrePeli >> clasPeli >> genPeli >> subPeli >> idiomaPeli >> precPeli >> horaPeli;
@@ -125,21 +125,21 @@ enviarDatosP.ingresoDatosBitacora(userName,"7210","MOD");
 			}
 			else
 			{
-					cout<<"\n\t\t\tIngresa el ID de la Pelicula: ";
+					cout<<"\n\t\t\tIngresa el ID del Informe: ";
                     cin>>idPeli;
-                    cout<<"\n\t\t\tIngresa el Nombre de la Pelicula: ";
+                    cout<<"\n\t\t\tIngresa el Nombre del Informe: ";
                     cin>>nombrePeli;
-                    cout<<"\t\t\tIngresa la clasificacion de la Peliculaa: ";
+                    cout<<"\t\t\tIngresa la clasificacion del Informe (tipo A,B,C,D; A es el mas urgente): ";
                     cin>>clasPeli;
-                    cout<<"\t\t\tIngresa el genero de la Pelicula: ";
+                    cout<<"\t\t\tIngresa el Razon del Informe: ";
                     cin>>genPeli;
-                    cout<<"\t\t\tIngresa los Sub-titulos de la Pelicula: ";
+                    cout<<"\t\t\tIngresa algun Sub-titulo al Informe (N/A si no lo desea): ";
                     cin>>subPeli;
-                    cout<<"\t\t\tIngresa el idioma de la Pelicula: ";
+                    cout<<"\t\t\tIngresa el area del Informe a realizar:  ";
                     cin>>idiomaPeli;
-                    cout<<"\t\t\tIngresa el Precio de la entrada: ";
+                    cout<<"\t\t\tIngresa el Nombre de la persona que registro el Informe: ";
                     cin>>precPeli;
-                    cout<<"\t\t\tIngresa la hora de entrada de la Peliculaa: ";
+                    cout<<"\t\t\tIngresa la hora de registro del informe: ";
                     cin>>horaPeli;
 
 				file1<<std::left<<std::setw(15)<< idPeli <<std::left<<std::setw(15)<< nombrePeli <<std::left<<std::setw(15)<< clasPeli <<std::left<<std::setw(15)<< genPeli <<std::left<<std::setw(15)<< subPeli <<std::left<<std::setw(15)<< idiomaPeli<<std::left<<std::setw(15)<< precPeli <<std::left<<std::setw(15)<< horaPeli << "\n";
@@ -149,8 +149,8 @@ enviarDatosP.ingresoDatosBitacora(userName,"7210","MOD");
 		}
 		file1.close();
 		file.close();
-		remove("Peliculas.txt");
-		rename("Record.txt","Peliculas.txt");
+		remove("Informes.txt");
+		rename("Record.txt","Informes.txt");
 	}
 }
 
@@ -161,8 +161,8 @@ void Peliculas::imprimirPeliculas(string nombreUsuario)
     system("cls");
 	fstream file;
 	int total=0;
-	cout<<"\n-------------------------Tabla de Detalles de Peliculas -------------------------"<<endl;
-	file.open("Peliculas.txt",ios::in);
+	cout<<"\n-------------------------Tabla de Detalles de Informes -------------------------"<<endl;
+	file.open("Informes.txt",ios::in);
 	if(!file)
 	{
 		cout<<"\n\t\t\tNo hay información...";
@@ -177,11 +177,11 @@ void Peliculas::imprimirPeliculas(string nombreUsuario)
 			cout<<"\n\n\t\t\t Id: "<<idPeli<<endl;
 			cout<<"\t\t\t Nombre: "<<nombrePeli<<endl;
 			cout<<"\t\t\t Clasificacion: "<<clasPeli<<endl;
-			cout<<"\n\n\t\t\t Genero: "<<genPeli<<endl;
+			cout<<"\n\n\t\t\t Razon: "<<genPeli<<endl;
 			cout<<"\n\n\t\t\t Sub-titulos: "<<subPeli<<endl;
-			cout<<"\n\n\t\t\t Idioma: "<<idiomaPeli<<endl;
-			cout<<"\n\n\t\t\t Precio: "<<precPeli<<endl;
-			cout<<"\n\n\t\t\t hora: "<<horaPeli<<endl;
+			cout<<"\n\n\t\t\t Area: "<<idiomaPeli<<endl;
+			cout<<"\n\n\t\t\t Registrado por: "<<precPeli<<endl;
+			cout<<"\n\n\t\t\t A las: "<<horaPeli<<"Horas"<<endl;
 			file >> idPeli >> nombrePeli >> clasPeli >> genPeli >> subPeli >> idiomaPeli >> precPeli >> horaPeli;
 		}
 		if(total==0)
@@ -199,38 +199,38 @@ void Peliculas::buscarPeliculas(string nombreUsuario)
 	system("cls");
 	fstream file;
 	int found=0;
-	file.open("Peliculas.txt",ios::in);
+	file.open("Informes.txt",ios::in);
 	if(!file)
 	{
-		cout<<"\n-------------------------Datos de las Peliculas buscadas------------------------"<<endl;
+		cout<<"\n-------------------------Datos de Informes buscados------------------------"<<endl;
 		cout<<"\n\t\t\tNo hay informacion...";
 	}
 	else
 	{
 		string participant_id;
-		cout<<"\n-------------------------Datos de las Peliculas buscadas------------------------"<<endl;
-		cout<<"\nIngrese el ID de la Pelicula que desee buscar: ";
+		cout<<"\n-------------------------Datos de Informes buscados------------------------"<<endl;
+		cout<<"\nIngrese el ID del Informe que desee buscar: ";
 		cin>>participant_id;
 		file >> idPeli >> nombrePeli >> clasPeli >> genPeli >> subPeli >> idiomaPeli >> precPeli >> horaPeli;
 		while(!file.eof())
 		{
 			if(participant_id==idPeli)
 			{
-			    cout<<"\n\n\t\t\t Id: "<<idPeli<<endl;
+			cout<<"\n\n\t\t\t Id: "<<idPeli<<endl;
 			cout<<"\t\t\t Nombre: "<<nombrePeli<<endl;
 			cout<<"\t\t\t Clasificacion: "<<clasPeli<<endl;
-			cout<<"\n\n\t\t\t Genero: "<<genPeli<<endl;
+			cout<<"\n\n\t\t\t Razon: "<<genPeli<<endl;
 			cout<<"\n\n\t\t\t Sub-titulos: "<<subPeli<<endl;
-			cout<<"\n\n\t\t\t Idioma: "<<idiomaPeli<<endl;
-			cout<<"\n\n\t\t\t Precio: "<<precPeli<<endl;
-			cout<<"\n\n\t\t\t hora: "<<horaPeli<<endl;
+			cout<<"\n\n\t\t\t Area: "<<idiomaPeli<<endl;
+			cout<<"\n\n\t\t\t Registrado por: "<<precPeli<<endl;
+			cout<<"\n\n\t\t\t A las: "<<horaPeli<<"Horas"<<endl;
 				found++;
 			}
             file >> idPeli >> nombrePeli >> clasPeli >> genPeli >> subPeli >> idiomaPeli >> precPeli >> horaPeli;
 		}
 		if(found==0)
 		{
-			cout<<"\n\t\t\t Pelicula no encontrada...";
+			cout<<"\n\t\t\t Informe no encontrada...";
 		}
 		file.close();
 	}
@@ -243,8 +243,8 @@ void Peliculas::borrarPeliculas(string nombreUsuario)
 	fstream file,file1;
 	string id;
 	int found=0;
-	cout<<"\n------------------------- Borrar Peliculas -------------------------"<<endl;
-	file.open("Peliculas.txt",ios::in);
+	cout<<"\n------------------------- Borrar Informes -------------------------"<<endl;
+	file.open("Informes.txt",ios::in);
 	if(!file)
 	{
 		cout<<"\n\t\t\tNo hay informacion...";
@@ -275,8 +275,8 @@ void Peliculas::borrarPeliculas(string nombreUsuario)
 		}
 		file1.close();
 		file.close();
-		remove("Peliculas.txt");
-		rename("Record.txt","Peliculas.txt");
+		remove("Informes.txt");
+		rename("Record.txt","Informes.txt");
 		exit(0);
 	}
 }

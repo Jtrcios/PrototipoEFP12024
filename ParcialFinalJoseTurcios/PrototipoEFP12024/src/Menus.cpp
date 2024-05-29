@@ -26,7 +26,7 @@ void Menus::menuInicial(string nombreUsuario)
     cout << "\t\t\t|    José Turcios 9959-22-4451                    |" <<endl;
     cout << "\t\t\t-------------------------------------------------\n";
     cout << "\n\t\t\t---------------------------------------------\n";
-    cout << "\t\t\t|        Bienvenido al Sistema                  |";
+    cout << "\t\t\t|        Bienvenido al Sistema de Securitas     |";
     cout << "\n\t\t\t-----------------------------------------------"<<endl;
 
     cout << "\n\t\t\t1. Menu Catalogos"<<endl;
@@ -85,8 +85,8 @@ void Menus::menuCatalogos(string nombreUsuario)
     cout << "\t\t\t| Bienvenido al Menu de Catalogos |";
     cout << "\n\t\t\t---------------------------------"<<endl;
 
-    cout << "\n\t\t\t1. Clientes "<<endl;
-    cout << "\t\t\t2. Peliculas "<<endl;
+    cout << "\n\t\t\t1. Informes "<<endl;
+    cout << "\t\t\t2. Seguridad "<<endl;
     cout << "\t\t\t3. Regresar" << endl;
     cout << "\n\n\t\t\t---------------------------------------";
     cout << "\n\t\t\t| Opciones a escoger: [1] - [2] - [3]";
@@ -185,7 +185,7 @@ void Menus::menuProcesos(string nombreUsuario)
     cout << "\n\t\t\t-----------------------------------\n";
     cout << "\t\t\t| Bienvenido al Menu de Procesos |";
     cout << "\n\t\t\t---------------------------------"<<endl;
-    cout << "\t\t\t1. Comprar Boletos de Pelicula"<<endl;
+    cout << "\t\t\t1. Informes"<<endl;
      cout << "\t\t\t2. Mostrar totales"<<endl;
     cout << "\t\t\t3. Salir del Sistema" << endl;
     cout << "\n\n\t\t\t---------------------------------------";

@@ -1,10 +1,17 @@
 # depslib dependency file v1.0
-1716977053 source:c:\users\usuario\desktop\parcial #3\prototipoefp12024\parcialfinaljoseturcios\prototipoefp12024\src\bitacora.cpp
+1716978423 source:c:\users\usuario\desktop\parcial #3\prototipoefp12024\parcialfinaljoseturcios\prototipoefp12024\src\bitacora.cpp
 	"Bitacora.h"
 
-1716977053 c:\users\usuario\desktop\parcial #3\prototipoefp12024\parcialfinaljoseturcios\prototipoefp12024\include\bitacora.h
+1716978592 c:\users\usuario\desktop\parcial #3\prototipoefp12024\parcialfinaljoseturcios\prototipoefp12024\include\bitacora.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<ctime>
 
-1716977257 source:c:\users\usuario\desktop\parcial #3\prototipoefp12024\parcialfinaljoseturcios\prototipoefp12024\main.cpp
+1716978423 source:c:\users\usuario\desktop\parcial #3\prototipoefp12024\parcialfinaljoseturcios\prototipoefp12024\main.cpp
 	<iostream>
 	<cstdlib>
 	<fstream>
@@ -67,4 +74,23 @@
 	"Usuario.h"
 	"Clientes.h"
 	"Peliculas.h"
+
+1716977704 source:c:\users\usuario\desktop\parcial #3\prototipoefp12024\parcialfinaljoseturcios\prototipoefp12024\src\clientes.cpp
+	"Clientes.h"
+
+1716977257 source:c:\users\usuario\desktop\parcial #3\prototipoefp12024\parcialfinaljoseturcios\prototipoefp12024\src\usuario.cpp
+	"Usuario.h"
+
+1716977983 source:c:\users\usuario\desktop\parcial #3\prototipoefp12024\parcialfinaljoseturcios\prototipoefp12024\src\ventaboletos.cpp
+	"VentaBoletos.h"
+
+1716979810 source:c:\users\usuario\desktop\parcial #3\prototipoefp12024\parcialfinaljoseturcios\prototipoefp12024\src\menus.cpp
+	"Menus.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<ctime>
 
