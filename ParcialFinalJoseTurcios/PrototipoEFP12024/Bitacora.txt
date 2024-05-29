@@ -1,0 +1,12 @@
+Turcios        7000           LOGIN          Wed May 29 10:59:05 2024
+
+Turcios        7200           INS            Wed May 29 10:59:18 2024
+
+Turcios        7220           IMP            Wed May 29 10:59:52 2024
+
+Turcios        7200           INS            Wed May 29 10:59:59 2024
+
+Turcios        7220           IMP            Wed May 29 11:01:03 2024
+
+Turcios        7000           LOGIN          Wed May 29 11:03:39 2024
+

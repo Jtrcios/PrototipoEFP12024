@@ -84,7 +84,7 @@
 1716977983 source:c:\users\usuario\desktop\parcial #3\prototipoefp12024\parcialfinaljoseturcios\prototipoefp12024\src\ventaboletos.cpp
 	"VentaBoletos.h"
 
-1716979810 source:c:\users\usuario\desktop\parcial #3\prototipoefp12024\parcialfinaljoseturcios\prototipoefp12024\src\menus.cpp
+1716980182 source:c:\users\usuario\desktop\parcial #3\prototipoefp12024\parcialfinaljoseturcios\prototipoefp12024\src\menus.cpp
 	"Menus.h"
 	<iostream>
 	<fstream>
@@ -93,4 +93,7 @@
 	<conio.h>
 	<iomanip>
 	<ctime>
+
+1716979961 source:c:\users\usuario\desktop\parcial #3\prototipoefp12024\parcialfinaljoseturcios\prototipoefp12024\src\peliculas.cpp
+	"Peliculas.h"
 
