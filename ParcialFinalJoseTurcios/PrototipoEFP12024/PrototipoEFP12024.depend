@@ -1,0 +1,70 @@
+# depslib dependency file v1.0
+1716977053 source:c:\users\usuario\desktop\parcial #3\prototipoefp12024\parcialfinaljoseturcios\prototipoefp12024\src\bitacora.cpp
+	"Bitacora.h"
+
+1716977053 c:\users\usuario\desktop\parcial #3\prototipoefp12024\parcialfinaljoseturcios\prototipoefp12024\include\bitacora.h
+
+1716977257 source:c:\users\usuario\desktop\parcial #3\prototipoefp12024\parcialfinaljoseturcios\prototipoefp12024\main.cpp
+	<iostream>
+	<cstdlib>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"Usuario.h"
+
+1716977257 c:\users\usuario\desktop\parcial #3\prototipoefp12024\parcialfinaljoseturcios\prototipoefp12024\include\usuario.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"Menus.h"
+
+1716977329 c:\users\usuario\desktop\parcial #3\prototipoefp12024\parcialfinaljoseturcios\prototipoefp12024\include\menus.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"Bitacora.h"
+	"Usuario.h"
+	"Clientes.h"
+	"Peliculas.h"
+	"VentaBoletos.h"
+
+1716977704 c:\users\usuario\desktop\parcial #3\prototipoefp12024\parcialfinaljoseturcios\prototipoefp12024\include\clientes.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"Bitacora.h"
+	"Menus.h"
+
+1716977773 c:\users\usuario\desktop\parcial #3\prototipoefp12024\parcialfinaljoseturcios\prototipoefp12024\include\peliculas.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"Bitacora.h"
+	"Menus.h"
+
+1716977983 c:\users\usuario\desktop\parcial #3\prototipoefp12024\parcialfinaljoseturcios\prototipoefp12024\include\ventaboletos.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"Bitacora.h"
+	"Usuario.h"
+	"Clientes.h"
+	"Peliculas.h"
+
