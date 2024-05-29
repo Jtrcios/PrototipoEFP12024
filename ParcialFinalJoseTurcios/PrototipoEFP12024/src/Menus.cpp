@@ -7,31 +7,31 @@
 #include<iomanip>
 #include <ctime>
 
-UsuarioPlanilla traerMenu;
-EmpleadosPlanilla enviarMenuE;
-Puestos enviarMenuP;
-Departamento enviarMenuD;
+Peliculas traerMenuPeli;
+Clientes traerMenuC;
+Usuario traerMenu;
 Bitacora imprimirBitacora;
+VentaBoletos traerMenuBoletos;
 
-string Menus::menuInicial(string nombreUsuario)
+void Menus::menuInicial(string nombreUsuario)
 {
     string userName = nombreUsuario;
-   // system("cls");
+    //system("cls");
     int optEscoger = 0;
     bool repetir = true;
     do
     {
     system("cls");
 	cout << "\t\t\t-------------------------------------------------\n";
-    cout << "\t\t\t|                  !Hola " << userName << "!                  |" <<endl;
+    cout << "\t\t\t|    José Turcios 9959-22-4451                    |" <<endl;
     cout << "\t\t\t-------------------------------------------------\n";
     cout << "\n\t\t\t---------------------------------------------\n";
-    cout << "\t\t\t| Bienvenido al Sistema de Nominas de Empleados |";
+    cout << "\t\t\t|        Bienvenido al Sistema                  |";
     cout << "\n\t\t\t-----------------------------------------------"<<endl;
 
     cout << "\n\t\t\t1. Menu Catalogos"<<endl;
     cout << "\t\t\t2. Menu Procesos"<<endl;
-    cout << "\t\t\t3. Menu Informes"<<endl;
+    cout << "\t\t\t3. Menu de Reportes"<<endl;
     cout << "\t\t\t4. Salir del Sistema" << endl;
     cout << "\n\n\t\t\t---------------------------------------";
     cout << "\n\t\t\t| Opciones a escoger: [1] - [2] - [3] - [4]";
@@ -69,7 +69,7 @@ string Menus::menuInicial(string nombreUsuario)
     }while(optEscoger!=4);
 }
 
-string Menus::menuCatalogos(string nombreUsuario)
+void Menus::menuCatalogos(string nombreUsuario)
 {
     string userName = nombreUsuario;
     system("cls");
@@ -79,18 +79,17 @@ string Menus::menuCatalogos(string nombreUsuario)
     {
             system("cls");
 	cout << "\t\t\t-------------------------------------------------\n";
-    cout << "\t\t\t|                  !Hola " << userName << "!                  |" <<endl;
+    cout << "\t\t\t|    José Turcios 9959-22-4451   |" <<endl;
     cout << "\t\t\t-------------------------------------------------\n";
     cout << "\n\t\t\t-----------------------------------\n";
     cout << "\t\t\t| Bienvenido al Menu de Catalogos |";
     cout << "\n\t\t\t---------------------------------"<<endl;
 
-    cout << "\n\t\t\t1. Empleados"<<endl;
-    cout << "\t\t\t2. Puestos"<<endl;
-    cout << "\t\t\t3. Departamentos"<<endl;
-    cout << "\t\t\t4. Regresar" << endl;
+    cout << "\n\t\t\t1. Clientes "<<endl;
+    cout << "\t\t\t2. Peliculas "<<endl;
+    cout << "\t\t\t3. Regresar" << endl;
     cout << "\n\n\t\t\t---------------------------------------";
-    cout << "\n\t\t\t| Opciones a escoger: [1] - [2] - [3] - [4]";
+    cout << "\n\t\t\t| Opciones a escoger: [1] - [2] - [3]";
     cout << "\n\t\t\t---------------------------------------";
 
     cout << "\n\n\t\t\tIngrese la opcion que desea escoger: ";
@@ -99,7 +98,7 @@ string Menus::menuCatalogos(string nombreUsuario)
     switch(optEscoger)
     {
     case 1:{
-    enviarMenuE.menuEmpleadosPlanilla(userName);
+    traerMenuC.menuClientes(userName);
        system("cls");
 
                 break;
@@ -107,26 +106,22 @@ string Menus::menuCatalogos(string nombreUsuario)
 
     case 2:{
         system("cls");
-        enviarMenuP.menuPuestos(userName);
+        traerMenuPeli.menuPeliculas(userName);
     break;
     }
     case 3:{
         system("cls");
-        enviarMenuD.DepartamentosPlanilla(userName);
+    menuInicial(userName);
         break;
         }
-    case 4:
-        system("cls");
-       menuInicial(userName);
-        break;
     default:
         cout << "Opcion invalida... Intente otra vez...";
 
     }
-    }while(optEscoger!=4);
+    }while(optEscoger!=3);
 }
 
-string Menus::subMenuInformes(string nombreUsuario)
+void Menus::subMenuInformes(string nombreUsuario)
 {
     string userName = nombreUsuario;
     system("cls");
@@ -136,11 +131,11 @@ string Menus::subMenuInformes(string nombreUsuario)
     {
     system("cls");
 	cout << "\t\t\t-------------------------------------------------\n";
-    cout << "\t\t\t|                  !Hola " << userName << "!                  |" <<endl;
+    cout << "\t\t\t|    José Turcios 9959-22-4451   |" <<endl;
     cout << "\t\t\t-------------------------------------------------\n";
     cout << "\n\t\t\t-----------------------------------\n";
-    cout << "\t\t\t| Bienvenido al Menu de Informes |";
-    cout << "\n\t\t\t---------------------------------"<<endl;
+    cout << "\t\t\t|   Bienvenido al Menu de Reportes  |";
+    cout << "\n\t\t\t-----------------------------------"<<endl;
 
     cout << "\n\t\t\t1. Bitacora"<<endl;
     cout << "\t\t\t2. Usuarios"<<endl;
@@ -176,7 +171,7 @@ string Menus::subMenuInformes(string nombreUsuario)
     }while(optEscoger!=3);
 }
 
-string Menus::menuProcesos(string nombreUsuario)
+void Menus::menuProcesos(string nombreUsuario)
 {
     string userName = nombreUsuario;
     system("cls");
@@ -184,18 +179,15 @@ string Menus::menuProcesos(string nombreUsuario)
   bool repetir = true;
     do
     {
-    cout << "\t\t\t-------------------------------------------------\n";
-    cout << "\t\t\t|                  !Hola " << userName << "!                  |" <<endl;
+	cout << "\t\t\t-------------------------------------------------\n";
+    cout << "\t\t\t|    José Turcios 9959-22-4451                    |" <<endl;
     cout << "\t\t\t-------------------------------------------------\n";
     cout << "\n\t\t\t-----------------------------------\n";
     cout << "\t\t\t| Bienvenido al Menu de Procesos |";
     cout << "\n\t\t\t---------------------------------"<<endl;
-    cout << "\t\t\t1. Descuentos"<<endl;
-    cout << "\t\t\t2. Horas Extras"<<endl;
-    cout << "\t\t\t3. Total a Pagar"<<endl;
-    cout << "\t\t\t4. Porcentajes"<<endl;
-    cout << "\t\t\t5. Salario Diario"<<endl;
-    cout << "\t\t\t6. Salir del Sistema" << endl;
+    cout << "\t\t\t1. Comprar Boletos de Pelicula"<<endl;
+     cout << "\t\t\t2. Mostrar totales"<<endl;
+    cout << "\t\t\t3. Salir del Sistema" << endl;
     cout << "\n\n\t\t\t---------------------------------------";
     cout << "\n\t\t\t| Opciones a escoger: [1] - [2] - [3] - [4]- [5]- [6]";
     cout << "\n\t\t\t---------------------------------------";
@@ -208,16 +200,16 @@ string Menus::menuProcesos(string nombreUsuario)
 
     case 1:{
        system("cls");
-       Descuentos menu;
-       menu.menuDescuentos();
+       VentaBoletos menBoletos;
+       menBoletos.VentaBoletosOp(userName);
        system("pause");
                 break;
     }
 
     case 2:{
         system("cls");
-        Descuentos menu;
-        menu.menuHorasExtra();
+        VentaBoletos mensBoletos;
+       mensBoletos.VentaBoletosTotal(userName);
         system("cls");
         system("pause");
 
@@ -225,34 +217,10 @@ string Menus::menuProcesos(string nombreUsuario)
     }
     case 3:{
         system("cls");
-        Descuentos menu;
-        menu.menuTotalPago();
-        system("pause");
-        break;
-        }
-    case 4:{
-        system("cls");
-        Porcentajes menu;
-        menu.menuporcentajes();
-        system("pause");
-        break;
-        }
-    case 5:{
-        system("cls");
-        HorasExtra menu;
-        menu.menuHorasExtra();
-        system("pause");
-        break;
-        }
-    case 6:{
-        system("cls");
         menuCatalogos(userName);
         system("pause");
         break;
+        }
     }
-    default:
-        cout << "Opcion invalida... Intente otra vez...";
-
-    }
-    }while(repetir);
+    }while(optEscoger!=3);
 }

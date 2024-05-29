@@ -1,11 +1,22 @@
+#ifndef USUARIO_H
+#define USUARIO_H
+#include <iostream>
+#include<fstream>
+#include<stdlib.h>
+#include<cstdlib>
+#include<conio.h>
+#include<iomanip>
+
+#include "Menus.h"
+
 using namespace std;
 
-class UsuarioPlanilla
+class Usuario
 {
 
 	public:
 		void iniciarSesion();
-		string menuUsuario(string nombreUsuario);
+		void menuUsuario(string nombreUsuario);
 		void registroUsuario();
 		void imprimirUsuario(string nombreUsuario);
 		void borrarUsuario(string nombreUsuario);
@@ -17,4 +28,4 @@ class UsuarioPlanilla
 		string nombre, contrasena;
 };
 
-#endif // USUARIOPLANILLA_H
+#endif // USUARIO_H

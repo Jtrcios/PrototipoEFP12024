@@ -1,11 +1,13 @@
-#include "UsuarioPlanilla.h"
+#include "Usuario.h"
 using namespace std;
 
+const string ADMINUSER = "Administrador";
+const string ADMINCONTRA = "123456";
 string nombreUsuario, contra;
 Menus llamarMenu;
 Bitacora enviarDatosU;
 
-void UsuarioPlanilla::iniciarSesion()
+void Usuario::iniciarSesion()
 {
     system("cls");
 	fstream file, file1;
@@ -47,6 +49,16 @@ void UsuarioPlanilla::iniciarSesion()
             found++;
 
         }
+                else
+        {
+            if (nombreUsuario ==ADMINUSER && contra ==ADMINCONTRA)
+            {
+                enviarDatosU.ingresoDatosBitacora(nombreUsuario,"7000","LOGIN");
+                llamarMenu.menuInicial(nombreUsuario);
+                return;
+                found++;
+            }
+        }
         file >> nombre >> contrasena;
 
     }
@@ -58,7 +70,7 @@ void UsuarioPlanilla::iniciarSesion()
     }
     file.close();
 }
-string UsuarioPlanilla::menuUsuario(string nombreUsuario)
+void Usuario::menuUsuario(string nombreUsuario)
 {
     string userName = nombreUsuario;
     char x;
@@ -67,7 +79,7 @@ string UsuarioPlanilla::menuUsuario(string nombreUsuario)
     {
 	system("cls");
 	cout << "\t\t\t-------------------------------------------------\n";
-    cout << "\t\t\t|                  !Hola " << userName << "!                  |" <<endl;
+    cout << "\t\t\t|    Kenph Ansonny Luna Martinez 9959--22-6326   |" <<endl;
     cout << "\t\t\t-------------------------------------------------\n";
     cout << "\n\t\t\t---------------------------------------------\n";
 	cout<<"\t\t\t |              Catalogo Usuarios                 |"<<endl;
@@ -110,7 +122,7 @@ string UsuarioPlanilla::menuUsuario(string nombreUsuario)
         }
     }while(opcion!=5);
 }
-void UsuarioPlanilla::registroUsuario()
+void Usuario::registroUsuario()
 {
 
 	system("cls");
@@ -121,11 +133,11 @@ void UsuarioPlanilla::registroUsuario()
 	cin>>nombre;
 	cout<<"\t\t\tIngresa la contraseña: ";
 	cin>>contrasena;
-	file.open("Usuario.txt", ios::app | ios::out);
+	file.open("Usuario.txt", ios::app | ios::out | ios::binary);
 	file<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena<< "\n";
 	file.close();
 }
-void UsuarioPlanilla::modificarUsuario(string nombreUsuario)
+void Usuario::modificarUsuario(string nombreUsuario)
 {
     string userName = nombreUsuario;
                 enviarDatosU.ingresoDatosBitacora(userName,"7410","MOD");
@@ -180,7 +192,7 @@ void UsuarioPlanilla::modificarUsuario(string nombreUsuario)
     remove("Usuario.txt");
     rename("Record.txt","Usuario.txt");
 }
-void UsuarioPlanilla::imprimirUsuario(string nombreUsuario)
+void Usuario::imprimirUsuario(string nombreUsuario)
 {
     string userName = nombreUsuario;
     enviarDatosU.ingresoDatosBitacora(userName,"7400","IMP");
@@ -212,7 +224,7 @@ void UsuarioPlanilla::imprimirUsuario(string nombreUsuario)
 	system("pause");
 	file.close();
 }
-void UsuarioPlanilla::buscarUsuario(string nombreUsuario)
+void Usuario::buscarUsuario(string nombreUsuario)
 {
     string userName = nombreUsuario;
                 enviarDatosU.ingresoDatosBitacora(userName,"7420","SRC");
@@ -249,7 +261,7 @@ void UsuarioPlanilla::buscarUsuario(string nombreUsuario)
 		file.close();
 	}
 }
-void UsuarioPlanilla::borrarUsuario(string nombreUsuario)
+void Usuario::borrarUsuario(string nombreUsuario)
 {
     string userName = nombreUsuario;
                 enviarDatosU.ingresoDatosBitacora(userName,"7430","DEL");
@@ -297,14 +309,13 @@ void UsuarioPlanilla::borrarUsuario(string nombreUsuario)
 	}
 }
 
-void UsuarioPlanilla::dibujarPortada(string nombreArchivo)
+void Usuario::dibujarPortada(string nombreArchivo)
 	{
         string line;
-        //char userInput = ' ';
         ifstream myFile(nombreArchivo);
         if(myFile.is_open())
         {
-            //Se obtiene la portada del juego
+
             while( getline(myFile, line))
             {
                 cout << line << endl;

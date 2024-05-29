@@ -5,21 +5,21 @@
 #include<cstdlib>
 #include<conio.h>
 #include<iomanip>
-#include "UsuarioPlanilla.h"
+#include "Usuario.h"
 
-UsuarioPlanilla llamaPortada;
+Usuario llamaPortada;
 using namespace std;
 
 int main()
 {
     llamaPortada.dibujarPortada("Portada.txt");
-    UsuarioPlanilla IngresoUsuario;
+    Usuario IngresoUsuario;
     int numero;
     do
     {
     system("cls");
     cout<<"\t\t\t------------------------------------------"<<endl;
-	cout<<"\t\t\t|        ¡ Bienvenido al Sistema !       |"<<endl;
+	cout<<"\t\t\t|        Bienvenido       |"<<endl;
 	cout<<"\t\t\t------------------------------------------"<<endl;
 	cout<<"\n\t\t\t 1. Iniciar sesion "<<endl;
 	cout<<"\t\t\t 2. Registrar nuevo Usuario"<<endl;
@@ -44,6 +44,7 @@ int main()
                 break;
 
             case 3:
+                exit(0);
                 break;
 
             default:
