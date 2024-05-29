@@ -1,16 +1,20 @@
-#ifndef USUARIOPLANILLA_H
-#define USUARIOPLANILLA_H
-
+using namespace std;
 
 class UsuarioPlanilla
 {
-    public:
-        UsuarioPlanilla();
-        virtual ~UsuarioPlanilla();
 
-    protected:
+	public:
+		void iniciarSesion();
+		string menuUsuario(string nombreUsuario);
+		void registroUsuario();
+		void imprimirUsuario(string nombreUsuario);
+		void borrarUsuario(string nombreUsuario);
+		void modificarUsuario(string nombreUsuario);
+		void buscarUsuario(string nombreUsuario);
+		void dibujarPortada(string nombreArchivo);
 
-    private:
+		private:
+		string nombre, contrasena;
 };
 
 #endif // USUARIOPLANILLA_H
